@@ -1,0 +1,38 @@
+<%-include('../cabecalho.ejs')%>
+    <h1>Jogos</h1>
+    <div>
+        <form action="
+        " method="post">
+        <input type="text" name="filtro"
+         id="" placeholder="digite o nome">
+         <button type="submit">Pesquisar</button>
+    </form>
+    </div>
+    <a href="/jogo/add">Adicionar Jogo</a>
+    <table>
+        <tr>
+            <td>Nome</td>
+            <td>Ano</td>
+            <td>Gênero</td>
+            <td>Desenvolvedor</td>
+            <td>Classificacao</td>
+            <td>Plataforma</td>
+            <td>Preco</td>
+            <td>Ações</td>
+        </tr>
+      
+        <%for (const {id, nome, ano, genero, desenvolvedor, classificacao, plataforma, preco} of Jogos) {%>
+        <tr>
+            <td><%=nome%></td>
+            <td><%=ano%></td>
+            <td><%=genero%></td>
+            <td><%=desenvolvedor%></td>
+            <td><%=classificacao%></td>
+            <td><%=plataforma%></td>
+            <td><%=preco%></td>
+            <td><a href="/jogo/edt/<%=id%>">Editar</a>
+            <a href="/jogo/del/<%=id%>">Excluir</a></td>
+        </tr>
+        <%}%>
+    </table>
+ <%-include('../rodape.ejs')%> 

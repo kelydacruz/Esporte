@@ -1,0 +1,39 @@
+<%-include('../cabecalho.ejs')%>
+<h1>Editar Genero</h1>
+<div>
+<a href="/jogo/lst">Listar</a>
+</div>
+<div>
+    <form  method="post">
+       
+        <input type="hidden" name="id" 
+        value="<%=Jogo.id%>"><br>
+
+        <label>Nome:</label>
+        <input type="text" name="nome" 
+        value="<%=Jogo.nome%>"><br>
+        <label>Ano:</label>
+        <input type="text" name="ano" 
+        value="<%=Jogo.ano%>"><br>
+        <label>Genero:</label>
+        <input type="text" name="genero" 
+        value="<%=Jogo.genero%>"><br>
+         <label>Desenvolvedor:</label>
+        <input type="text" name="desenvolvedor" 
+        value="<%=Jogo.desenvolvedor%>"><br>
+         <label>Classificacao:</label>
+        <input type="text" name="classificacao" 
+        value="<%=Jogo.classificacao%>"><br>
+         <label>Plataforma:</label>
+        <input type="text" name="plataforma" 
+        value="<%=Jogo.plataforma%>"><br>
+         <label>Preco:</label>
+        <input type="text" name="preco" 
+        value="<%=Jogo.preco%>"><br>
+
+        <button type="submit">Cadastrar</button>
+        
+    </form>
+</div>
+
+<%-include('../rodape.ejs')%>
